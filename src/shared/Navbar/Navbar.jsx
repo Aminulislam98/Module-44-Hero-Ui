@@ -1,5 +1,5 @@
 import ThemeSwitch from "@/components/ThemeSwitch";
-import { Link, Button } from "@heroui/react";
+import { Link } from "@heroui/react";
 
 import React from "react";
 
@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="tasks">Tasks</Link>
+            <Link href="/tasks">Tasks</Link>
           </li>
         </ul>
         <ThemeSwitch></ThemeSwitch>

@@ -40,7 +40,7 @@ export function AddTaskForm({ addNewTask }) {
                   {/* this is task's description */}
                   <TextField className="w-full" name="description" type="text">
                     <Label>Description</Label>
-                    <Input placeholder="Enter your email" />
+                    <Input placeholder="Enter Your descriptions" />
                   </TextField>
                   {/* this is form's Status  */}
                   <Select
@@ -107,7 +107,9 @@ export function AddTaskForm({ addNewTask }) {
                     <Button slot="close" variant="secondary">
                       Cancel
                     </Button>
-                    <Button type="submit">Submit a Task</Button>
+                    <Button slot="close" type="submit">
+                      Submit a Task
+                    </Button>
                   </Modal.Footer>
                 </form>
               </Surface>
