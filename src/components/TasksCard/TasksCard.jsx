@@ -4,7 +4,7 @@ export function TasksCard({ task }) {
   const { title, id, description, status, priority } = task;
 
   return (
-    <Card variant="primary" className="max-w-full w-full">
+    <Card variant="tertiary" className="max-w-full w-full">
       {/* <CircleDollar
         aria-label="Dollar sign icon"
         className="text-primary size-6"
