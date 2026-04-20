@@ -1,3 +1,4 @@
+"use client";
 import { addNewTask1 } from "@/lib/actions";
 import { CirclePlus } from "@gravity-ui/icons";
 import {
@@ -9,24 +10,50 @@ import {
   TextField,
   Select,
   ListBox,
+  Form,
+  FieldError,
 } from "@heroui/react";
 
 const NewTask = () => {
   return (
     <div className="max-w-2xl w-full mx-auto">
-      <form action={addNewTask1} className="flex flex-col gap-4">
+      <Form action={addNewTask1} className="flex flex-col gap-4">
         {/* this is form's title */}
-        <TextField className="w-full" name="title" type="text">
+        <TextField
+          validate={(value) => {
+            if (value.length < 5) {
+              return "Title must be at least 4 characters";
+            }
+            return null;
+          }}
+          isRequired
+          className="w-full"
+          name="title"
+          type="text"
+        >
           <Label>Title</Label>
           <Input placeholder="Enter your Task Title" />
+          <FieldError />
         </TextField>
         {/* this is task's description */}
-        <TextField className="w-full" name="description" type="text">
+        <TextField
+          validate={(value) => {
+            if (value.length < 2) {
+              return "Description must be added something!";
+            }
+            return null;
+          }}
+          className="w-full"
+          name="description"
+          type="text"
+        >
           <Label>Description</Label>
           <Input placeholder="Enter Your descriptions" />
+          <FieldError />
         </TextField>
         {/* this is form's Status  */}
         <Select
+          isRequired
           name="status"
           className="max-w-full w-full mx-auto"
           placeholder="Select a Status"
@@ -52,12 +79,14 @@ const NewTask = () => {
               </ListBox.Item>
             </ListBox>
           </Select.Popover>
+          <FieldError />
         </Select>
         {/* this is form's Priority */}
         <Select
           name="priority"
           className="max-w-full w-full mx-auto"
           placeholder="Priority level"
+          isRequired
         >
           <Label>Priority</Label>
           <Select.Trigger>
@@ -80,21 +109,30 @@ const NewTask = () => {
               </ListBox.Item>
             </ListBox>
           </Select.Popover>
+          <FieldError></FieldError>
         </Select>
         {/* this is form's assignedTo */}
-        <TextField className="w-full" name="AssignedTo">
+        <TextField
+          validate={(value) => {
+            if (!value) {
+              return "Please Add an Assign";
+            }
+            return null;
+          }}
+          className="w-full"
+          name="AssignedTo"
+        >
           <Label>Assigned To</Label>
           <Input placeholder="Task Assigned To" />
+          <FieldError></FieldError>
         </TextField>
         <div className="flex flex-row justify-end gap-3">
           <Button slot="close" variant="secondary">
             Cancel
           </Button>
-          <Button slot="close" type="submit">
-            Submit a Task
-          </Button>
+          <Button type="submit">Submit a Task</Button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 };
