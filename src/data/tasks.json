@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Finish Next.js dashboard UI",
+    "description": "Complete layout and responsive design for dashboard page",
+    "status": "in-progress",
+    "priority": "high",
+    "due_date": "2026-04-22",
+    "created_at": "2026-04-20",
+    "tags": ["nextjs", "frontend", "ui"],
+    "assigned_to": "Am inur"
+  },
+  {
+    "id": 2,
+    "title": "Fix form validation",
+    "description": "Add client-side validation and error messages",
+    "status": "pending",
+    "priority": "medium",
+    "due_date": "2026-04-24",
+    "created_at": "2026-04-20",
+    "tags": ["javascript", "forms"],
+    "assigned_to": "Aminur"
+  },
+  {
+    "id": 3,
+    "title": "Connect API to frontend",
+    "description": "Fetch data using fetch/axios and display on UI",
+    "status": "pending",
+    "priority": "high",
+    "due_date": "2026-04-23",
+    "created_at": "2026-04-19",
+    "tags": ["api", "data-fetching"],
+    "assigned_to": "Aminur"
+  },
+  {
+    "id": 4,
+    "title": "Implement authentication",
+    "description": "Add login and signup functionality",
+    "status": "in-progress",
+    "priority": "high",
+    "due_date": "2026-04-26",
+    "created_at": "2026-04-18",
+    "tags": ["auth", "security"],
+    "assigned_to": "Aminur"
+  },
+  {
+    "id": 5,
+    "title": "Optimize images",
+    "description": "Use Next.js Image component for better performance",
+    "status": "completed",
+    "priority": "low",
+    "due_date": "2026-04-19",
+    "created_at": "2026-04-17",
+    "tags": ["performance"],
+    "assigned_to": "Aminur"
+  },
+  {
+    "id": 6,
+    "title": "Add dark mode",
+    "description": "Implement theme toggle using Tailwind",
+    "status": "pending",
+    "priority": "medium",
+    "due_date": "2026-04-27",
+    "created_at": "2026-04-20",
+    "tags": ["tailwind", "ui"],
+    "assigned_to": "Aminur"
+  }
+]
